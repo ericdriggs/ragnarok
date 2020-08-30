@@ -13,12 +13,10 @@ import java.io.Serializable;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class TestStatus implements Serializable {
 
-    private static final long serialVersionUID = -1453203724;
+    private static final long serialVersionUID = -1196301267;
 
-    private Byte   testStatusId;
-    private String testStatusName;
-
-    public TestStatus() {}
+    private final Byte   testStatusId;
+    private final String testStatusName;
 
     public TestStatus(TestStatus value) {
         this.testStatusId = value.testStatusId;
@@ -37,18 +35,8 @@ public class TestStatus implements Serializable {
         return this.testStatusId;
     }
 
-    public TestStatus setTestStatusId(Byte testStatusId) {
-        this.testStatusId = testStatusId;
-        return this;
-    }
-
     public String getTestStatusName() {
         return this.testStatusName;
-    }
-
-    public TestStatus setTestStatusName(String testStatusName) {
-        this.testStatusName = testStatusName;
-        return this;
     }
 
     @Override

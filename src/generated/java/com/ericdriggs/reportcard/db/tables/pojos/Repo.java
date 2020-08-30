@@ -13,13 +13,11 @@ import java.io.Serializable;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Repo implements Serializable {
 
-    private static final long serialVersionUID = -474839944;
+    private static final long serialVersionUID = -1359423066;
 
-    private Integer repoId;
-    private String  repoName;
-    private Integer orgFk;
-
-    public Repo() {}
+    private final Integer repoId;
+    private final String  repoName;
+    private final Integer orgFk;
 
     public Repo(Repo value) {
         this.repoId = value.repoId;
@@ -41,27 +39,12 @@ public class Repo implements Serializable {
         return this.repoId;
     }
 
-    public Repo setRepoId(Integer repoId) {
-        this.repoId = repoId;
-        return this;
-    }
-
     public String getRepoName() {
         return this.repoName;
     }
 
-    public Repo setRepoName(String repoName) {
-        this.repoName = repoName;
-        return this;
-    }
-
     public Integer getOrgFk() {
         return this.orgFk;
-    }
-
-    public Repo setOrgFk(Integer orgFk) {
-        this.orgFk = orgFk;
-        return this;
     }
 
     @Override
